@@ -1,0 +1,12 @@
+web: 172.16.20.30:19000
+db:
+  ch:
+    url: 172.16.20.20:9000
+    port: 19000
+    ver: 19.09
+    user: default
+    passwd: somepassword
+    some_list:
+      - aaaaa
+      - bbbb
+

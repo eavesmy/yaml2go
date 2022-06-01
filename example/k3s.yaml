@@ -1,0 +1,147 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    io.cilium.network.ipv4-cilium-host: 10.0.0.206
+    io.cilium.network.ipv4-health-ip: 10.0.0.94
+    io.cilium.network.ipv4-pod-cidr: 10.0.0.0/24
+    k3s.io/hostname: m3
+    k3s.io/internal-ip: 172.16.30.30
+    k3s.io/node-args: '["server","--flannel-backend","none","--disable-network-policy"]'
+    k3s.io/node-config-hash: NHWEB5IDX32YVIYZ3TF3SFHOMWTPSXGQE3JRXYQTNWA4BW5LYB5A====
+    k3s.io/node-env: '{"K3S_DATASTORE_ENDPOINT":"********","K3S_DATA_DIR":"/var/lib/rancher/k3s/data/8c2b0191f6e36ec6f3cb68e2302fcc4be850c6db31ec5f8a74e4b3be403101d8"}'
+    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2022-05-23T07:04:17Z"
+  finalizers:
+  - wrangler.cattle.io/node
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/instance-type: k3s
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: m3
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/control-plane: "true"
+    node-role.kubernetes.io/master: "true"
+    node.kubernetes.io/instance-type: k3s
+  name: m3
+  resourceVersion: "1197310"
+  uid: 5bfc7cec-baa7-45a3-98c3-1eed2adfde83
+spec:
+  podCIDR: 10.42.0.0/24
+  podCIDRs:
+  - 10.42.0.0/24
+  providerID: k3s://m3
+status:
+  addresses:
+  - address: 172.16.30.30
+    type: InternalIP
+  - address: m3
+    type: Hostname
+  allocatable:
+    cpu: "4"
+    ephemeral-storage: "101980569521"
+    hugepages-2Mi: "0"
+    memory: 32891232Ki
+    pods: "110"
+  capacity:
+    cpu: "4"
+    ephemeral-storage: 102375Mi
+    hugepages-2Mi: "0"
+    memory: 32891232Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2022-05-23T07:12:27Z"
+    lastTransitionTime: "2022-05-23T07:12:27Z"
+    message: Cilium is running on this node
+    reason: CiliumIsUp
+    status: "False"
+    type: NetworkUnavailable
+  - lastHeartbeatTime: "2022-05-31T03:07:49Z"
+    lastTransitionTime: "2022-05-23T07:04:17Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2022-05-31T03:07:49Z"
+    lastTransitionTime: "2022-05-23T07:04:17Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2022-05-31T03:07:49Z"
+    lastTransitionTime: "2022-05-23T07:04:17Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2022-05-31T03:07:49Z"
+    lastTransitionTime: "2022-05-31T03:07:49Z"
+    message: kubelet is posting ready status
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - docker.io/rancher/klipper-helm:v0.7.1-build20220407
+    sizeBytes: 239337098
+  - names:
+    - quay.io/cilium/cilium@sha256:48e1a261046c2e534e370f960f0920233f9fd5ad4623aebdca0e403264a06202
+    sizeBytes: 149948575
+  - names:
+    - docker.io/rancher/mirrored-library-traefik:2.6.2
+    sizeBytes: 103482466
+  - names:
+    - quay.io/cilium/json-mock@sha256:2729064827fa9dbfface8d3df424feb6c792a0ba07117b844349635c93c06d2b
+    sizeBytes: 75159982
+  - names:
+    - docker.io/rancher/mirrored-metrics-server:v0.5.2
+    sizeBytes: 65673656
+  - names:
+    - docker.io/envoyproxy/envoy@sha256:e8b37c1d75787dd1e712ff389b0d37337dc8a174a63bed9c34ba73359dc67da7
+    sizeBytes: 53158183
+  - names:
+    - docker.io/rancher/mirrored-coredns-coredns:1.9.1
+    sizeBytes: 49672672
+  - names:
+    - docker.io/rancher/local-path-provisioner:v0.0.21
+    sizeBytes: 35257594
+  - names:
+    - quay.io/cilium/operator-generic@sha256:468ce59342298f1cf87ca8512cd9192754e83348b347a4bc7c27158ef9c4a37d
+    sizeBytes: 16096240
+  - names:
+    - quay.io/cilium/hubble-ui-backend@sha256:2bce50cf6c32719d072706f7ceccad654bfa907b2745a496da99610776fe31ed
+    sizeBytes: 14421119
+  - names:
+    - quay.io/cilium/hubble-relay@sha256:8f30fb40bd46be4d1bfb55eb91cff7d0f8958eeb486d6184b5495f6624cf6ff1
+    sizeBytes: 13792392
+  - names:
+    - quay.io/cilium/hubble-ui@sha256:4eaca1ec1741043cfba6066a165b3bf251590cf4ac66371c4f63fbed2224ebb4
+    sizeBytes: 12163263
+  - names:
+    - quay.io/cilium/alpine-curl@sha256:2550c747831ff575f2147149b088ea981c06f9b6bcd188756d1b82cc10997956
+    sizeBytes: 8864527
+  - names:
+    - docker.io/rancher/klipper-lb:v0.3.5
+    sizeBytes: 8508369
+  - names:
+    - docker.io/rancher/mirrored-library-busybox:1.34.1
+    sizeBytes: 1461080
+  - names:
+    - docker.io/rancher/mirrored-pause:3.6
+    sizeBytes: 685866
+  nodeInfo:
+    architecture: amd64
+    bootID: f60a23fb-e2d6-4e27-92d2-437343ebde61
+    containerRuntimeVersion: containerd://1.5.11-k3s2
+    kernelVersion: 5.4.91-1.el7.elrepo.x86_64
+    kubeProxyVersion: v1.23.6+k3s1
+    kubeletVersion: v1.23.6+k3s1
+    machineID: 601fbd6cbb6d4878a97836b570933a9e
+    operatingSystem: linux
+    osImage: CentOS Linux 7 (Core)
+    systemUUID: ff681e42-7242-a6de-ded4-98d740027bb8
