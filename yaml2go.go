@@ -41,7 +41,7 @@ func (y *Yaml2Struct) procMap(level int, k string, v interface{}) {
 	for k1, v1 := range v.(map[string]interface{}) {
 		y.procKV(level+1, k1, v1)
 	}
-	y.StructStr = fmt.Sprintf("%s\n%s} `yaml:\"%s\"`", y.StructStr, strings.Repeat("\t", level), toCample(k))
+	y.StructStr = fmt.Sprintf("%s\n%s} `yaml:\"%s\"`", y.StructStr, strings.Repeat("\t", level), k)
 }
 
 func (y *Yaml2Struct) procKV(level int, k string, v interface{}) {

@@ -1,7 +1,7 @@
 package example
 
 import (
-	"github.com/fengzxu/yaml2go"
+	"github.com/eavesmy/yaml2go"
 	"log"
 	"os"
 )
