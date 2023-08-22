@@ -1,4 +1,4 @@
-module github.com/fengzxu/yaml2go
+module github.com/eavesmy/yaml2go
 
 go 1.17
 
